@@ -1,0 +1,25 @@
+paths:
+  raw_heart_data: "data/raw/heart.csv"
+  raw_diabetes_data: "data/raw/diabetes.csv"
+  processed_data_dir: "data/processed/"
+  output_dir: "outputs/"
+
+data_params:
+  test_size: 0.2
+  random_state: 101
+
+models:
+  logistic_regression:
+    max_iter: 2000
+    C: 0.5
+  svm:
+    kernel: "rbf"
+    C: 0.1
+    probability: true
+  random_forest:
+    n_estimators: 200
+    max_depth: 8
+  xgboost:
+    n_estimators: 150
+    learning_rate: 0.05
+    max_depth: 4
